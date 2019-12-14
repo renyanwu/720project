@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn
 
-df = pd.read_csv('total.csv')
+df = pd.read_csv('data/total.csv')
 
 print(df.columns.values)
 arr = []
@@ -19,7 +19,7 @@ import pandas as pd
 import matplotlib.pyplot as mp
 import seaborn
 
-df = pd.read_csv("total.csv")
+df = pd.read_csv("data/total.csv")
 print(df.head())
 df_corr = df.corr()
 seaborn.heatmap(df_corr, center=0, annot=True)

@@ -10,13 +10,13 @@ sact = []
 scont = []
 
 for i in range(1, 10):
-    df = pd.read_csv('2018_0' + str(i) + '.csv')
+    df = pd.read_csv('data/2018_0' + str(i) + '.csv')
     sm.append(sum([sum(df[col]) for col in df.columns.values]))
     sact.append(sum([sum(df[col]) for col in act]))
     scont.append(sum([sum(df[col]) for col in cont]) - 2 * sum(df['DeleteEvent']))
 
 for i in range(10, 13):
-    df = pd.read_csv('2018_' + str(i) + '.csv')
+    df = pd.read_csv('data/2018_' + str(i) + '.csv')
     sm.append(sum([sum(df[col]) for col in df.columns.values]))
     sact.append(sum([sum(df[col]) for col in act]))
     scont.append(sum([sum(df[col]) for col in cont]) - 2 * sum(df['DeleteEvent']))

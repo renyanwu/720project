@@ -2,11 +2,11 @@ import pandas as pd
 
 for i in range(1, 13):
     if i < 10:
-        inname = "20180" + str(i)
-        outname = "2018_0" + str(i) + ".csv"
+        inname = "data/20180" + str(i)
+        outname = "data/2018_0" + str(i) + ".csv"
     else:
-        inname = "2018" + str(i)
-        outname = "2018_" + str(i) + ".csv"
+        inname = "data/2018" + str(i)
+        outname = "data/2018_" + str(i) + ".csv"
 
     df = pd.read_csv(inname)
     default_dict = {'DeleteEvent': 0, 'PullRequestReviewCommentEvent': 0, 'WatchEvent': 0, 'CommitCommentEvent': 0,
@@ -23,14 +23,14 @@ for i in range(1, 13):
     out.to_csv(outname, index = False)
 
 
-df = pd.read_csv('2018_01.csv')
+df = pd.read_csv('data/2018_01.csv')
 for i in range(2, 10):
-    df_new = pd.read_csv('2018_0' + str(i) + '.csv')
+    df_new = pd.read_csv('data/2018_0' + str(i) + '.csv')
     df = pd.concat([df, df_new])
     
 
 for i in range(10, 13):
-    df = pd.read_csv('2018_' + str(i) + '.csv')
+    df = pd.read_csv('data/2018_' + str(i) + '.csv')
     df = pd.concat([df, df_new])
 
 df.to_csv('total.csv', index = False)

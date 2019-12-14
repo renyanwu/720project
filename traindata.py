@@ -5,7 +5,7 @@ import xgboost as xgb
 from sklearn.model_selection import train_test_split
 import numpy as np
 
-df = pd.read_csv('total.csv')
+df = pd.read_csv('data/total.csv')
 cont = []
 
 for i, row in df.iterrows():
