@@ -33,4 +33,4 @@ for i in range(10, 13):
     df = pd.read_csv('data/2018_' + str(i) + '.csv')
     df = pd.concat([df, df_new])
 
-df.to_csv('total.csv', index = False)
+df.to_csv('data/total.csv', index = False)
